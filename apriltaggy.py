@@ -3,8 +3,9 @@ import numpy as np
 import cv2
 import sys
 import signal
-from dt_apriltags import Detector
 from pymavlink import mavutil
+from dt_apriltags import Detector
+#from pymavlink import mavutil
 import depth_control as dc
 import matplotlib.pyplot as plt
 
