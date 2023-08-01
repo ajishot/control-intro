@@ -39,6 +39,19 @@ def set_vertical_power(mav, power=0):
 
     set_rc_channel_pwm(mav, 3, 1500 + power * 5)
 
+def set_lateral_power(mav, power=0):
+    """Set vertical power
+    Args:
+        power (int, optional): Vertical power value -100-100
+    """
+    if power < -100 or power > 100:
+        print("Power value out of range. Clipping...")
+        power = np.clip(power, -100, 100)
+
+    power = int(power)
+
+    set_rc_channel_pwm(mav, 5, 1500 + power * 5)
+
 
 def press_to_depth(pressure):
     """Convert pressure to depth
