@@ -99,7 +99,7 @@ while ret:
         plt.imshow(color_img)
         count+=1
 
-        heading_pid = pid.PID(25, .0, 5.0, 100)
+        
 
 
 
