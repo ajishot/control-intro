@@ -50,7 +50,7 @@ def set_lateral_power(mav, power=0):
 
     power = int(power)
 
-    set_rc_channel_pwm(mav, 5, 1500 + power * 5)
+    set_rc_channel_pwm(mav, 6, 1500 + power * 5)
 
 
 def press_to_depth(pressure):
