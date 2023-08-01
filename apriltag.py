@@ -52,8 +52,6 @@ while ret:
             lateral_pid = pid.PID(32, 0.5, -1, 20)
             
             while True:
-                # get pressure from the vehicle
-                msg = mav.recv_match(type="SCALED_PRESSURE", blocking=True)
 
                 desired_depth = center_y
                 current_depth = width/2
@@ -71,13 +69,6 @@ while ret:
                 dc.set_vertical_power(mav, -output) 
 
                 #-------------------------------------------------------------
-
-                # # get yaw from the vehicle
-                # msg = mav.recv_match(type="ATTITUDE", blocking=True)
-                # yaw = msg.yaw
-                # yaw_rate = msg.yawspeed
-
-                # print("Heading: ", np.rad2deg(yaw))
 
                 desired_lat  = center_x
                 fixed_lat  = length/2
